@@ -135,21 +135,9 @@ function ClickHandler() {
               <div className="videoFrame">
                 <VideoPlayer />
               </div>
-            </li>
-         <li>
-              <button className="testMe" style={{background:color}} onClick={()=>{setColor("silver")}}  >
-              <h1>
-                testing click
-              </h1>
-              </button>
-            </li> 
-            <li>
-              <button className="testMe2" style={{background:color}} onChange={()=>{setColor("silver")}}  >
-              <h1>
-                testing click
-              </h1>
-              </button>
-            </li>   
+            </li>        
+           
+             
           </ul>
         </div>
         <div className="centerInfo">         
