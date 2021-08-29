@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import Pic1 from "./images/01-joachim.png";
 import Pic2 from "./images/02-pagnia.png";
-import Pic3 from "./images/03-southAmerica.png";
+import Pic3 from "./images/03b-southAmerica.png";
 import Pic4 from "./images/06-cameroonCoast.png";
 import Pic5 from "./images/UsCongress.jpg";
 import "../App.css";
+import Footer from "./Footer";
 import { InfoBox1, InfoBox2, InfoBox3, InfoBox4, InfoBox5 } from "./InfoBox1";
 import VideoPlayer from "./VideoPlayer";
 import Image1 from "./images/Jachymov-Joachimsthaler.jpeg";
@@ -12,7 +13,7 @@ import Image2 from "./images/SpanienPhilippstaler.jpeg";
 import Image3 from "./images/SouthAmerica-spain-real.jpeg";
 import Image4 from "./images/WestAfrica-CFA.jpeg";
 import Image5 from "./images/silver-dollars-new.jpg";
-
+import "../components/overlay.css"
 export default function MapLoader() {
   return <ClickHandler />;
 }
@@ -61,10 +62,11 @@ function ClickHandler() {
     },
   ];
 
-  const [localeIndex, setLocaleIndex] = useState(0);
-  const [number, setNumber] = useState(1);
-  const [activePoint, setActivePoint] = useState(locations[0]);
+    const [activePoint, setActivePoint] = useState(locations[0]);
+    const [color, setColor]=useState("red")
 
+  
+   
   return (
     <div className="container">
       <h1>(1) History of the U.S. Dollar</h1>
@@ -98,10 +100,13 @@ function ClickHandler() {
             </li>
             <li>
               <button
-                className="selected"
+                className="selected" 
                 onClick={() => {
+                 
                   setActivePoint(locations[2]);
-                }}
+                   <changeBtnColor/>
+                  
+               }}
               >
                 <h3>South America (Silver coins)</h3>
               </button>
@@ -131,23 +136,42 @@ function ClickHandler() {
                 <VideoPlayer />
               </div>
             </li>
+         <li>
+              <button className="testMe" style={{background:color}} onClick={()=>{setColor("silver")}}  >
+              <h1>
+                testing click
+              </h1>
+              </button>
+            </li> 
+            <li>
+              <button className="testMe2" style={{background:color}} onChange={()=>{setColor("silver")}}  >
+              <h1>
+                testing click
+              </h1>
+              </button>
+            </li>   
           </ul>
         </div>
-        <div className="centerInfo">
-          {/* <img src={activePoint.URL} />{" "} */}
-          <Map activePoint={activePoint} />
+        <div className="centerInfo">         
+          <Map activePoint={activePoint} />        
         </div>
+        <div className="overlay"> <img src={activePoint.URL} /></div>
         <div className="rightInfo">
           <img id="image-info-card" src={activePoint.image} />
+          
           <div
             className="infoBoxed"
             dangerouslySetInnerHTML={{ __html: activePoint.info }}
           >
-            {/* {activePoint.info} */}
+          
           </div>
+          
         </div>
+        
       </div>
+     
     </div>
+    
   );
 }
 
@@ -161,7 +185,7 @@ function Map(props) {
   useEffect(() => {
     map = new window.google.maps.Map(document.getElementById("maphere"), {
       center: { lat: props.activePoint.lat, lng: props.activePoint.lng },
-      zoom: 12,
+      zoom: 8,
     });
   }, []);
   return <div id="maphere" style={{ width: "auto-Fit", height: "600px" }} />;

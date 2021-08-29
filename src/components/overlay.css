@@ -1,0 +1,13 @@
+.overlay{
+    position: absolute;
+    width: 340px;
+    height: 400px;
+    top: 53vh;
+    left: 45vw;
+}
+.overlay img{
+    width: 100%;
+    object-fit: fill;
+    border: double 2px rgb(173, 124, 163);
+    border-radius: 15%;
+}

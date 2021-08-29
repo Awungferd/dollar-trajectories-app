@@ -8,8 +8,8 @@ export default function Footer() {
       <p>
         <img className="loading" src={Image2} />
         <span> </span>
-        HISTORY SIMPLIFIED is developed by Ferdinand Mbecha and Carsten Hennig -
-        This very first beta page presents the first chapter: The history of US$
+        <b>HISTORY SIMPLIFIED</b> is developed by Ferdinand Mbecha and Carsten Hennig -
+        This very first beta page presents the first chapter: <b>The history of US$</b>
       </p>
     </footer>
   );

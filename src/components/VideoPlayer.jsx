@@ -10,7 +10,7 @@ import Video from "./images/dollarHistory.mp4"
       </div>
     ); */
 
-    return <video className="VideoPlayer" controls autostart autoPlay src={Video} type="video/mp4"/ >
+    return <video className="VideoPlayer" controls autostart="true"  src={Video} type="video/mp4"/ >
   }
 
   export default VideoPlayer; 

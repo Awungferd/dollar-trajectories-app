@@ -7,8 +7,9 @@ function App() {
   return (
     <div>
       <MapLoader />
-      <hr />
-      <Footer />
+       <hr /> 
+       <Footer /> 
+       <hr/>
     </div>
   );
 }
