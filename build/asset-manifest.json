@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/dollar-trajectories-app/static/css/main.44a99e69.chunk.css",
+    "main.css": "/dollar-trajectories-app/static/css/main.7e8f3527.chunk.css",
     "main.js": "/dollar-trajectories-app/static/js/main.863c0ba8.chunk.js",
     "main.js.map": "/dollar-trajectories-app/static/js/main.863c0ba8.chunk.js.map",
     "runtime-main.js": "/dollar-trajectories-app/static/js/runtime-main.734eac51.js",
@@ -8,7 +8,7 @@
     "static/js/2.740f55a1.chunk.js": "/dollar-trajectories-app/static/js/2.740f55a1.chunk.js",
     "static/js/2.740f55a1.chunk.js.map": "/dollar-trajectories-app/static/js/2.740f55a1.chunk.js.map",
     "index.html": "/dollar-trajectories-app/index.html",
-    "static/css/main.44a99e69.chunk.css.map": "/dollar-trajectories-app/static/css/main.44a99e69.chunk.css.map",
+    "static/css/main.7e8f3527.chunk.css.map": "/dollar-trajectories-app/static/css/main.7e8f3527.chunk.css.map",
     "static/js/2.740f55a1.chunk.js.LICENSE.txt": "/dollar-trajectories-app/static/js/2.740f55a1.chunk.js.LICENSE.txt",
     "static/media/01-joachim.941db708.png": "/dollar-trajectories-app/static/media/01-joachim.941db708.png",
     "static/media/02-pagnia.70d48a79.png": "/dollar-trajectories-app/static/media/02-pagnia.70d48a79.png",
@@ -26,7 +26,7 @@
   "entrypoints": [
     "static/js/runtime-main.734eac51.js",
     "static/js/2.740f55a1.chunk.js",
-    "static/css/main.44a99e69.chunk.css",
+    "static/css/main.7e8f3527.chunk.css",
     "static/js/main.863c0ba8.chunk.js"
   ]
 }

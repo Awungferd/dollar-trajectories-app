@@ -14,6 +14,7 @@ import Image3 from "./images/SouthAmerica-spain-real.jpeg";
 import Image4 from "./images/WestAfrica-CFA.jpeg";
 import Image5 from "./images/silver-dollars-new.jpg";
 import "../components/overlay.css"
+
 export default function MapLoader() {
   return <ClickHandler />;
 }
@@ -63,9 +64,12 @@ function ClickHandler() {
   ];
 
     const [activePoint, setActivePoint] = useState(locations[0]);
-    const [color, setColor]=useState("red")
+    const [color, setColor]=useState(false)
 
-  
+  const selectedBtn= (e)=>{
+    setColor(!color)
+    
+  }
    
   return (
     <div className="container">
@@ -79,6 +83,9 @@ function ClickHandler() {
         <div className="leftInfo">
           <ul>
             <li>
+              
+
+
               <button
                 className="selected"
                 onClick={() => {
@@ -98,38 +105,43 @@ function ClickHandler() {
                 <h3>Spain (Taler)</h3>
               </button>
             </li>
+  
             <li>
               <button
                 className="selected" 
                 onClick={() => {
                  
                   setActivePoint(locations[2]);
-                   <changeBtnColor/>
+                   
                   
                }}
               >
                 <h3>South America (Silver coins)</h3>
               </button>
             </li>
+  
             <li>
-              <button
+             <button 
                 className="selected"
-                onClick={() => {
+                onClick={() => {                 
                   setActivePoint(locations[3]);
                 }}
               >
                 <h3>West Africa (Ndola)</h3>
               </button>
-            </li>
+            </li> 
+ {/* ==WORKING== */}
             <li>
               <button
                 className="selected"
-                onClick={() => {
+                onClick={() => {                 
                   setActivePoint(locations[4]);
+
                 }}
               >
                 <h3>USA (Dollar)</h3>
               </button>
+    {/* ==WORKING== */}            
               <br />
               <br />
               <div className="videoFrame">
