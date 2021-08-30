@@ -36,11 +36,13 @@ body {
 
 .selected {
   color: black;
+  background: linear-gradient(to right, #ffffff, #e8e9e8);
+  border-radius: 50%; 
 
 }
 button:focus{
- background: -webkit-linear-gradient(to right, #ffffff, #bbc0bb);  
-background: linear-gradient(to right, #ffffff, #bbc0bb); 
+
+background: linear-gradient(to right, #ffffff, #b4beb4); 
 border-top-right-radius: 50%;
 border-bottom-right-radius: 50%;
 
@@ -48,7 +50,7 @@ border-bottom-right-radius: 50%;
 button {
   align-content: stretch;
   background-color: inherit;
-border-bottom: 0.1em solid rgb(47, 47, 48); 
+border-bottom: 0em solid rgb(47, 47, 48); 
 border-right: 0px;
 border-top: 0px;
 border-left: 0px; 
